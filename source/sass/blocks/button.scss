@@ -1,0 +1,17 @@
+.button {
+  margin: 0;
+  padding: 22px 20px;
+  font-family: $primary-font;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: $base-white;
+  border: 2px solid $base-white;
+  background-color: transparent;
+
+  @media ($tablet) {
+    padding: 20px;
+  }
+}
