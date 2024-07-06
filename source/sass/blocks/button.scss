@@ -11,6 +11,26 @@
   border: 2px solid $base-white;
   background-color: transparent;
 
+  @include animation;
+
+  &:hover {
+    color: $price;
+    background-color: $base-white;
+  }
+
+  &:focus-visible {
+    color: $price;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000000;
+    outline: none;
+  }
+
+  &:active {
+    color: #102654;
+    background-color: $base-white;
+    border: 2px solid $base-white;
+  }
+
   @media ($tablet) {
     padding: 20px;
   }
