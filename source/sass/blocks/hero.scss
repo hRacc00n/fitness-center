@@ -87,7 +87,7 @@
 
   @media ($tablet) {
     max-width: 768px;
-    padding-top: 52px;
+    padding-top: 32px;
     padding-bottom: 31px;
     grid-template-columns: 113px 185px;
     gap: 0 26px;
@@ -104,6 +104,7 @@
 
   @media ($desktop) {
     max-width: 1366px;
+    padding-top: 52px;
     padding-left: 147px;
     padding-bottom: 52px;
     grid-template-columns: 115px 270px;
