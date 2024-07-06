@@ -53,7 +53,12 @@
             <source type="image/jpeg" media="(min-width: 768px)" srcset="img/about/about-tablet@1x.jpg 1x, img/about/about-tablet@2x.jpg 2x" width="678" height="345">
             <img class="about__image" src="img/about/about-mobile@1x.jpg" srcset="img/about/about-mobile@2x.jpg 2x" alt="Интерьер тренажерного зала" width="320" height="280">
           </picture>
-          <iframe class="about__video" src="https://www.youtube.com/embed/9TZXsZItgdw?si=TZ0KEWYYlFsPh4yK" title="Бесплатные интерактивные онлайн-курсы" width="320" height="170" loading="lazy" frameborder="0"></iframe>
+          <div class="about__video">
+            <button class="about__button" type="button">
+              <span class="visually-hidden">Включить видео</span>
+            </button>
+            <iframe class="about__iframe" src="https://www.youtube.com/embed/9TZXsZItgdw?si=TZ0KEWYYlFsPh4yK" title="Бесплатные интерактивные онлайн-курсы" width="320" height="170" loading="lazy" frameborder="0" autoplay="1"></iframe>
+          </div>
         </div>
       </div>
     </section>
