@@ -1,5 +1,10 @@
 .about__iframe {
-  display: none;
+  width: 100%;
+  height: 100%;
+
+  &--js {
+    display: none;
+  }
 }
 
 .about__container {
@@ -12,6 +17,8 @@
 
   @media ($desktop) {
     display: grid;
+    max-width: 1366px;
+    margin: 0 auto;
     padding: 120px 103px 240px;
     grid-template-columns: 355px 1fr;
     gap: 145px;
@@ -250,6 +257,10 @@
     &::after {
       border-left-color: #102654;
     }
+  }
+
+  &--js {
+    display: none;
   }
 
   @media ($desktop) {
