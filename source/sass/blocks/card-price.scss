@@ -1,6 +1,10 @@
 .card-price {
   padding: 51px 42px 49px;
   background-color: $base-white;
+
+  @media ($tablet) {
+    padding: 65px;
+  }
 }
 
 .card-price__title {
@@ -10,6 +14,16 @@
   font-weight: 700;
   line-height: 1;
   text-align: center;
+
+  @media ($tablet) {
+    margin-bottom: 22px;
+    font-size: 24px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 17px;
+    font-size: 26px;
+  }
 }
 
 .card-price__quantity {
@@ -19,6 +33,16 @@
   font-weight: 300;
   line-height: 1.57;
   text-align: center;
+
+  @media ($tablet) {
+    margin-bottom: 82px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 77px;
+  }
 }
 
 .card-price__price {
@@ -57,5 +81,32 @@
     height: 33px;
     background-image: url("/__spritemap#sprite-rub-view");
     translate: 0 -50%;
+  }
+
+  @media ($tablet) {
+    margin-bottom: 22px;
+    padding-left: 42px;
+    font-size: 60px;
+
+    &::before {
+      width: 250px;
+      height: 150px;
+      font-size: 100px;
+    }
+
+    &::after {
+      right: 42px;
+      width: 30px;
+      height: 42px;
+    }
+  }
+
+  @media ($desktop) {
+    margin-bottom: 17px;
+    padding-left: 32px;
+
+    &::after {
+      right: 32px;
+    }
   }
 }

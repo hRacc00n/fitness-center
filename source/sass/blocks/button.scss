@@ -61,5 +61,9 @@
 
   @media ($tablet) {
     padding: 20px;
+
+    &--secondary {
+      padding: 26px 20px 24px;
+    }
   }
 }
