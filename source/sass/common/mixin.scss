@@ -1,3 +1,9 @@
-@mixin animation($anim: all) {
-  transition: $anim 0.3s ease 0s;
+@mixin animation() {
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s, opacity 0.3s ease 0s;
+}
+
+@mixin list-resseting {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }

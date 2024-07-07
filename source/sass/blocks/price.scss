@@ -1,0 +1,57 @@
+.price {
+  background-color: $primary-bg;
+}
+
+.price__container {
+  padding: 41px 15px 39px;
+}
+
+.price__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+}
+
+.price__months {
+  @include list-resseting;
+
+  display: flex;
+  gap: 46px;
+  background: linear-gradient(to top, rgba(120, 120, 120, 0.2) 0, rgba(120, 120, 120, 0.2) 2px, transparent 2px);
+}
+
+.price__month-button {
+  padding: 0;
+  padding-bottom: 5px;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: $light;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--active {
+    color: #102654;
+    border-bottom: 2px solid #d10a42;
+  }
+}
+
+.price__cards {
+  @include list-resseting;
+
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.price__card {
+  width: 100%;
+  min-height: 384px;
+}

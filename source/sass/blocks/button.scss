@@ -32,6 +32,33 @@
     border: 2px solid $base-white;
   }
 
+  &--secondary {
+    width: 100%;
+    padding: 25px 20px;
+    border-color: $base-color;
+    color: $base-color;
+
+    @include animation;
+
+    &:hover {
+      box-sizing: border-box;
+      padding: 27px 20px;
+      color: $base-white;
+      background: linear-gradient(90deg, #ed0233 0%, #003eb7 100%);
+      border: none;
+
+      @include animation;
+    }
+
+    &:focus-visible {
+      background: linear-gradient(130deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
   @media ($tablet) {
     padding: 20px;
   }
