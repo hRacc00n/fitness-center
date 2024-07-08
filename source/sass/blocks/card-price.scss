@@ -1,10 +1,16 @@
 .card-price {
-  padding: 51px 42px 49px;
+  padding: 44px 35px 40px;
   background-color: $base-white;
+  border: 7px solid $base-white;
 
   @media ($tablet) {
-    padding: 65px;
+    padding: 58px;
   }
+}
+
+.card-price:has(.card-price__button:hover),
+.card-price:has(.card-price__button:focus-visible) {
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%) 7;
 }
 
 .card-price__title {
@@ -46,11 +52,12 @@
 }
 
 .card-price__price {
+  display: inline-block;
   z-index: 2;
   position: relative;
   margin: 0;
   margin-bottom: 19px;
-  padding: 0 71px 0 37px;
+  padding: 0 34px 0 37px;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.5;
@@ -68,7 +75,7 @@
     line-height: 1.5;
     color: $price-shadow;
     text-align: center;
-    translate: -50% 0;
+    translate: -40% 0;
     z-index: -1;
   }
 
@@ -76,7 +83,7 @@
     content: "";
     position: absolute;
     top: 50%;
-    right: 37px;
+    right: 0;
     width: 24px;
     height: 33px;
     background-image: url("/__spritemap#sprite-rub-view");
@@ -95,7 +102,7 @@
     }
 
     &::after {
-      right: 42px;
+      right: -11px;
       width: 30px;
       height: 42px;
     }
@@ -104,9 +111,5 @@
   @media ($desktop) {
     margin-bottom: 17px;
     padding-left: 32px;
-
-    &::after {
-      right: 32px;
-    }
   }
 }

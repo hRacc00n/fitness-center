@@ -107,6 +107,8 @@
   border: none;
   cursor: pointer;
 
+  @include animation;
+
   &--active {
     color: #102654;
     border-bottom: 2px solid #d10a42;

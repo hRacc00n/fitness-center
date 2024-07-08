@@ -7,14 +7,14 @@ const data = {
     fullDay: 2700,
   },
   6: {
-    trainer: 4500,
-    day: 1500,
-    fullDay: 2500,
+    trainer: 30000,
+    day: 10200,
+    fullDay: 16200,
   },
   12: {
-    trainer: 4000,
-    day: 1000,
-    fullDay: 2000,
+    trainer: 60000,
+    day: 20400,
+    fullDay: 32400,
   },
 };
 
