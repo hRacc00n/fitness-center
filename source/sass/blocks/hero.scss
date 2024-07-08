@@ -57,6 +57,22 @@
   color: #ffffff;
   text-decoration: none;
 
+  &:hover {
+    color: rgba(28, 51, 116, 0.5);
+  }
+
+  &:focus-visible {
+    color: $btn-border;
+  }
+
+  &:active {
+    color: $base-color;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+  }
+
   @media ($tablet) {
     font-size: 24px;
   }

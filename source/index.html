@@ -21,7 +21,7 @@
       <div class="hero__container">
 
         <header class="hero__header">
-          <img src="/__spritemap#sprite-logotest-view" alt="Логотип SUPERGYM" width="100" height="20">
+          <img src="/__spritemap#sprite-logo-view" alt="Логотип SUPERGYM" width="100" height="20">
           <a class="hero__link" href="tel:88005555555">8 800 555-55-55</a>
         </header>
 
@@ -31,13 +31,13 @@
             <h1 class="hero__title">Фитнес центр</h1>
             <p class="hero__features">Тренажёрный зал<br> Групповые занятия<br> Кардио-зона
             </p>
-            <button class="hero__button button" type="button">Купить абонемент</button>
+            <a class="hero__button button" href="#price">Купить абонемент</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section data-test="about">
+    <section class="about" data-test="about">
       <div class="about__container">
         <div class="about__content">
           <h2 class="about__title">Тренажёрный зал</h2>
@@ -66,10 +66,49 @@
       </div>
     </section>
 
+    <section class="price" id="price" data-test="price">
 
+      <div class="price__container">
+        <h2 class="price__title">Абонементы</h2>
 
+        <ul class="price__months">
+          <li class="price__month">
+            <button class="price__month-button price__month-button--active" type="button" data-month="1">1 месяц</button>
+          </li>
+          <li class="price__month">
+            <button class="price__month-button" type="button" data-month="6">6 месяцев</button>
+          </li>
+          <li class="price__month">
+            <button class="price__month-button" type="button" data-month="12">12 месяцев</button>
+          </li>
+        </ul>
 
-    <div data-test="price">price</div>
+        <ul class="price__cards">
+          <li class="price__card card-price">
+            <h3 class="card-price__title">С тренером</h3>
+            <p class="card-price__quantity">12 занятий</p>
+            <p class="card-price__price" data-price="5000" role="none">5000</p>
+            <button class="card-price__button button button--secondary" type="button">Купить абонемент</button>
+          </li>
+
+          <li class="price__card card-price">
+            <h3 class="card-price__title">Дневной</h3>
+            <p class="card-price__quantity">с 8:00 до 17:00</p>
+            <p class="card-price__price" data-price="1700">1700</p>
+            <button class="card-price__button button button--secondary" type="button">Купить абонемент</button>
+          </li>
+
+          <li class="price__card card-price">
+            <h3 class="card-price__title">Полный день</h3>
+            <p class="card-price__quantity">с 8:00 до 22:00</p>
+            <p class="card-price__price" data-price="2700">2700</p>
+            <button class="card-price__button button button--secondary" type="button">Купить абонемент</button>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
     <div data-test="games">games</div>
     <div data-test="juri">juri</div>
     <div data-test="features">features</div>

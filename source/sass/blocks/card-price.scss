@@ -1,0 +1,115 @@
+.card-price {
+  padding: 44px 35px 40px;
+  background-color: $base-white;
+  border: 7px solid $base-white;
+
+  @media ($tablet) {
+    padding: 58px;
+  }
+}
+
+.card-price:has(.card-price__button:hover),
+.card-price:has(.card-price__button:focus-visible) {
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%) 7;
+}
+
+.card-price__title {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+
+  @media ($tablet) {
+    margin-bottom: 22px;
+    font-size: 24px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 17px;
+    font-size: 26px;
+  }
+}
+
+.card-price__quantity {
+  margin: 0;
+  margin-bottom: 64px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.57;
+  text-align: center;
+
+  @media ($tablet) {
+    margin-bottom: 82px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 77px;
+  }
+}
+
+.card-price__price {
+  display: inline-block;
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0 34px 0 37px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $price;
+
+  &::before {
+    content: attr(data-price) / "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 206px;
+    height: 120px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: $price-shadow;
+    text-align: center;
+    translate: -40% 0;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 24px;
+    height: 33px;
+    background-image: url("/__spritemap#sprite-rub-view");
+    translate: 0 -50%;
+  }
+
+  @media ($tablet) {
+    margin-bottom: 22px;
+    padding-left: 42px;
+    font-size: 60px;
+
+    &::before {
+      width: 250px;
+      height: 150px;
+      font-size: 100px;
+    }
+
+    &::after {
+      right: -11px;
+      width: 30px;
+      height: 42px;
+    }
+  }
+
+  @media ($desktop) {
+    margin-bottom: 17px;
+    padding-left: 32px;
+  }
+}
