@@ -1,14 +1,57 @@
 .games {
-  padding: 26px 15px 24px;
+  padding: 25px 15px 24px;
+
+  @media ($tablet) {
+    padding: 60px 45px 59px;
+  }
+
+  @media ($desktop) {
+    padding: 100px 103px;
+  }
 }
 
 .games__container {
-  min-height: 610px;
   padding: 40px;
-  background-color: $play-btn;
-  background-image: url("../../img/games/games-background-mobile@1x.jpg");
+  padding-bottom: 330px;
+  background:
+    image-set(
+      url("../../img/games/games-background-mobile@1x.webp") type("image/webp") 1x,
+      url("../../img/games/games-background-mobile@2x.webp") type("image/webp") 2x,
+      url("../../img/games/games-background-mobile@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/games/games-background-mobile@2x.jpg") type("image/jpeg") 2x
+    ),
+    $play-btn;
   background-repeat: no-repeat;
   background-position: bottom 0 left 0;
+
+  @media ($tablet) {
+    padding: 40px;
+    padding-right: 418px;
+    background:
+      image-set(
+        url("../../img/games/games-background-tablet@1x.webp") type("image/webp") 1x,
+        url("../../img/games/games-background-tablet@2x.webp") type("image/webp") 2x,
+        url("../../img/games/games-background-tablet@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/games/games-background-tablet@2x.jpg") type("image/jpeg") 2x
+      ),
+      $play-btn;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  @media ($desktop) {
+    padding: 61px 740px 98px 80px;
+    background:
+      image-set(
+        url("../../img/games/games-background-desktop@1x.webp") type("image/webp") 1x,
+        url("../../img/games/games-background-desktop@2x.webp") type("image/webp") 2x,
+        url("../../img/games/games-background-desktop@1x.jpg") type("image/jpeg") 1x,
+        url("../../img/games/games-background-desktop@2x.jpg") type("image/jpeg") 2x
+      ),
+      $play-btn;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
 }
 
 .games__title {
@@ -19,18 +62,42 @@
   line-height: 1.12;
   color: $base-white;
   text-transform: uppercase;
+
+  @media ($tablet) {
+    width: 100px;
+  }
+
+  @media ($desktop) {
+    width: 168px;
+    font-size: 82px;
+    line-height: 1.17;
+  }
 }
 
 .games__header {
   display: flex;
   margin-bottom: 17px;
   gap: 56px;
+
+  @media ($tablet) {
+    margin-bottom: 11px;
+    gap: 22px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 30px;
+    gap: 78px;
+  }
 }
 
 .games__dates {
   width: 56px;
   margin: 0;
   padding: 0;
+
+  @media ($tablet) {
+    width: 100%;
+  }
 }
 
 .games__text-content {
@@ -42,6 +109,21 @@
 
   &:not(:last-of-type) {
     margin-bottom: 5px;
+    gap: 0 4px;
+  }
+
+  @media ($tablet) {
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+      gap: 0 6px;
+    }
+  }
+
+  @media ($desktop) {
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+      gap: 3px 6px;
+    }
   }
 }
 
@@ -53,6 +135,17 @@
   line-height: 1.25;
   color: $base-white;
   border-bottom: 1px solid $base-white;
+
+  @media ($tablet) {
+    padding-bottom: 1px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 5px;
+    padding-bottom: 4px;
+  }
 }
 
 .games__day {
@@ -62,6 +155,15 @@
   line-height: 1;
   color: $base-white;
   grid-row: 1 / 3;
+
+  @media ($tablet) {
+    padding-top: 10px;
+  }
+
+  @media ($desktop) {
+    padding-top: 4px;
+    font-size: 40px;
+  }
 }
 
 .games__month,
@@ -70,6 +172,11 @@
   font-weight: 400;
   line-height: 1;
   color: $base-white;
+
+  @media ($tablet) {
+    font-size: 14px;
+    line-height: 1.57;
+  }
 }
 
 .games__time {
@@ -77,6 +184,11 @@
   font-weight: 700;
   line-height: 1;
   color: $base-white;
+
+  @media ($desktop) {
+    font-size: 40px;
+    line-height: 1;
+  }
 }
 
 .games__text {
@@ -86,4 +198,20 @@
   font-weight: 300;
   line-height: 1.25;
   color: $base-white;
+
+  @media ($tablet) {
+    margin-bottom: 9px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.games__button {
+  @media ($tablet) {
+    padding: 25px 20px;
+  }
 }
