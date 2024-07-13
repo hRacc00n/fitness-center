@@ -1,0 +1,106 @@
+.juri {
+  width: 320px;
+  margin: 0 auto;
+  padding: 40px 30px 37px;
+
+  @media ($tablet) {
+    position: relative;
+    width: 768px;
+    padding: 32px 104px 58px;
+  }
+
+  @media ($desktop) {
+    width: 1366px;
+    padding: 99px 103px 101px;
+  }
+}
+
+.juri__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+
+  @media ($tablet) {
+    font-size: 54px;
+    margin-bottom: 44px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 46px;
+  }
+}
+
+.juri__name {
+  position: absolute;
+  display: block;
+  bottom: 30px;
+  width: 100%;
+  padding: 0 10px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+
+  @media ($tablet) {
+    bottom: 29px;
+  }
+}
+
+.juri__button-prev,
+.juri__button-next {
+  // display: none;
+  position: absolute;
+  bottom: 181px;
+  right: 34px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 34%;
+    width: 23px;
+    height: 23px;
+    border-top: 1px solid $base-color;
+    border-right: 1px solid $base-color;
+    translate: -50% -50%;
+    rotate: 45deg;
+  }
+
+  &:hover {
+    border: 1px solid $base-color;
+  }
+
+  &:focus-visible {
+    background-color: $price-shadow;
+    border: 1px solid $base-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $base-color;
+
+    &::before {
+      border-color: $base-white;
+    }
+  }
+
+  @media ($desktop) {
+    bottom: 229px;
+    right: 32px;
+  }
+}
+
+.juri__button-prev {
+  left: 34px;
+  rotate: 180deg;
+}
