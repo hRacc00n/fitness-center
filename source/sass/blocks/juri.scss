@@ -1,7 +1,7 @@
 .juri {
   width: 320px;
   margin: 0 auto;
-  padding: 43px 30px 37px;
+  padding: 40px 30px 37px;
 
   @media ($tablet) {
     position: relative;
@@ -10,13 +10,14 @@
   }
 
   @media ($desktop) {
-    width: 1160px;
+    width: 1366px;
+    padding: 99px 103px 101px;
   }
 }
 
 .juri__title {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   font-family: $secondary-font;
   font-size: 32px;
   font-weight: 600;
@@ -25,6 +26,10 @@
 
   @media ($tablet) {
     font-size: 54px;
+    margin-bottom: 44px;
+  }
+
+  @media ($desktop) {
     margin-bottom: 46px;
   }
 }
@@ -63,6 +68,11 @@
     border-top: 1px solid #102654;
     border-right: 1px solid #102654;
     cursor: pointer;
+  }
+
+  @media ($desktop) {
+    right: 53px;
+    bottom: 231px;
   }
 }
 
