@@ -235,19 +235,6 @@
   width: 260px;
 }
 
-.swiper-name {
-  position: absolute;
-  display: block;
-  bottom: 30px;
-  width: 100%;
-  padding: 0 10px;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 1;
-  color: #ffffff;
-  text-align: center;
-}
-
 .swiper-popup {
   position: absolute;
   top: 0;
