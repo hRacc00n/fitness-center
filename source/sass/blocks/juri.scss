@@ -53,30 +53,54 @@
 
 .juri__button-prev,
 .juri__button-next {
-  display: none;
+  // display: none;
+  position: absolute;
+  bottom: 181px;
+  right: 34px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
 
-  @media ($tablet) {
-    display: block;
+  &::before {
+    content: "";
     position: absolute;
-    bottom: 185px;
-    right: 55px;
+    top: 50%;
+    left: 34%;
     width: 23px;
     height: 23px;
-    translate: 0 -50%;
+    border-top: 1px solid $base-color;
+    border-right: 1px solid $base-color;
+    translate: -50% -50%;
     rotate: 45deg;
-    z-index: 5;
-    border-top: 1px solid #102654;
-    border-right: 1px solid #102654;
-    cursor: pointer;
+  }
+
+  &:hover {
+    border: 1px solid $base-color;
+  }
+
+  &:focus-visible {
+    background-color: $price-shadow;
+    border: 1px solid $base-color;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $base-color;
+
+    &::before {
+      border-color: $base-white;
+    }
   }
 
   @media ($desktop) {
-    right: 53px;
-    bottom: 231px;
+    bottom: 229px;
+    right: 32px;
   }
 }
 
 .juri__button-prev {
-  left: 55px;
-  rotate: 225deg;
+  left: 34px;
+  rotate: 180deg;
 }
