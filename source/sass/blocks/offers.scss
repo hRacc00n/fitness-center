@@ -1,0 +1,115 @@
+.offers {
+  padding: 41px 0 39px;
+  text-align: center;
+}
+
+.offers__title {
+  margin: 0;
+  margin-bottom: 39px;
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: $base-color;
+  text-align: center;
+}
+
+.offers__ticket {
+  margin-bottom: 40px;
+  padding: 31px 30px 384px;
+  background:
+    image-set(
+      url("../../img/offers/offers-mobile@1x.webp") type("image/webp") 1x,
+      url("../../img/offers/offers-mobile@2x.webp") type("image/webp") 2x,
+      url("../../img/offers/offers-mobile@1x.jpg") type("image/jpeg") 1x,
+      url("../../img/offers/offers-mobile@2x.jpg") type("image/jpeg") 2x
+    ),
+    $play-btn;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.offers__content {
+  text-align: center;
+  color: $base-white;
+}
+
+
+.offers__content span:first-of-type {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.offers__content span:not(:first-of-type) {
+  display: block;
+  margin-bottom: 27px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.offers__content p {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.offers a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: $base-white;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 7px;
+  border: 1px solid transparent;
+}
+
+.offers__advertising {
+  color: $btn-border;
+}
+
+.offers__advertising ul {
+  @include list-resseting;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.offers__advertising li {
+  width: 290px;
+  margin: 0 auto;
+  padding: 21px 20px 14px;
+  border: 7px solid transparent;
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%) 7;
+}
+
+.offers__advertising h3 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.offers__advertising p {
+  margin: 0;
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.57;
+}
+
+.offers__advertising a {
+  color: $btn-border;
+  text-decoration-color: $divider;
+}
