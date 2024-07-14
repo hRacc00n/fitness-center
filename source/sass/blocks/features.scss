@@ -67,6 +67,7 @@
     position: relative;
     width: 360px;
     grid-template-columns: 1fr 210px;
+    grid-template-rows: min-content;
 
 
     &:not(:nth-last-child(-n+3)),
@@ -81,13 +82,6 @@
         background-color: rgba(209, 10, 66, 0.2);
       }
     }
-  }
-}
-
-.features li:nth-child(2) h3,
-.features li:nth-child(5) h3 {
-  @media ($desktop) {
-    margin-bottom: 7px;
   }
 }
 
@@ -154,7 +148,7 @@
     display: inline-block;
     width: 210px;
     margin-top: 1px;
-    margin-bottom: 3px;
+    margin-bottom: 7px;
     font-size: 22px;
     justify-self: end;
   }
