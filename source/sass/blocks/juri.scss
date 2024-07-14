@@ -1,12 +1,12 @@
 .juri {
   width: 320px;
   margin: 0 auto;
-  padding: 40px 30px 37px;
+  padding: 40px 30px 42px;
 
   @media ($tablet) {
     position: relative;
     width: 768px;
-    padding: 32px 104px 58px;
+    padding: 32px 104px 62px;
   }
 
   @media ($desktop) {
@@ -53,44 +53,48 @@
 
 .juri__button-prev,
 .juri__button-next {
-  // display: none;
-  position: absolute;
-  bottom: 181px;
-  right: 34px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
-  cursor: pointer;
+  display: none;
 
-  &::before {
-    content: "";
+  @media ($tablet) {
+    display: block;
     position: absolute;
-    top: 50%;
-    left: 34%;
-    width: 23px;
-    height: 23px;
-    border-top: 1px solid $base-color;
-    border-right: 1px solid $base-color;
-    translate: -50% -50%;
-    rotate: 45deg;
-  }
-
-  &:hover {
-    border: 1px solid $base-color;
-  }
-
-  &:focus-visible {
-    background-color: $price-shadow;
-    border: 1px solid $base-color;
-    outline: none;
-  }
-
-  &:active {
-    background-color: $base-color;
+    bottom: 181px;
+    right: 34px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
 
     &::before {
-      border-color: $base-white;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 34%;
+      width: 23px;
+      height: 23px;
+      border-top: 1px solid $base-color;
+      border-right: 1px solid $base-color;
+      translate: -50% -50%;
+      rotate: 45deg;
+    }
+
+    &:hover {
+      border: 1px solid $base-color;
+    }
+
+    &:focus-visible {
+      background-color: $price-shadow;
+      border: 1px solid $base-color;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $base-color;
+
+      &::before {
+        border-color: $base-white;
+      }
     }
   }
 
