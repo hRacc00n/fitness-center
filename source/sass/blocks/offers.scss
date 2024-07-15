@@ -139,7 +139,7 @@
   }
 }
 
-.offers a {
+.offers__link {
   display: inline-block;
   padding: 10px;
   font-size: 14px;
@@ -152,14 +152,62 @@
   text-underline-offset: 7px;
   border: 1px solid transparent;
 
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &:focus-visible {
+    text-decoration: none;
+    border-color: $base-white;
+    outline: none;
+  }
+
+  &:active {
+    color: $base-white;
+    text-decoration: underline;
+    border-color: transparent;
+  }
+
+  &--adversting {
+    color: $btn-border;
+    text-decoration-color: $divider;
+
+    &:hover {
+      color: rgba(28, 51, 116, 0.8);
+      text-decoration-color: rgba(28, 51, 116, 0.8);
+    }
+
+    &:focus-visible {
+      text-decoration: none;
+      border-color: $btn-border;
+    }
+
+    &:active {
+      color: $btn-border;
+      text-decoration-color: $btn-border;
+      border-color: transparent;
+    }
+  }
+
   @media ($tablet) {
     position: absolute;
     bottom: 34px;
     left: 14px;
+
+    &--adversting {
+      position: relative;
+      left: -11px;
+      bottom: 0;
+    }
   }
 
   @media ($desktop) {
     left: 34px;
+
+    &--adversting {
+      left: -11px;
+      bottom: -9px;
+    }
   }
 }
 
@@ -232,20 +280,5 @@
     font-size: 16px;
     line-height: 1.5;
     flex-grow: 1;
-  }
-}
-
-.offers__advertising a {
-  color: $btn-border;
-  text-decoration-color: $divider;
-
-  @media ($tablet) {
-    position: relative;
-    left: -11px;
-    bottom: 0;
-  }
-
-  @media ($desktop) {
-    bottom: -9px;
   }
 }
