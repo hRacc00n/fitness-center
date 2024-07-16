@@ -1,5 +1,5 @@
 .offers {
-  padding: 41px 0 39px;
+  padding: 41px 0 40px;
   text-align: center;
 
   @media ($tablet) {
@@ -49,7 +49,7 @@
       url("../../img/offers/offers-mobile@1x.jpg") type("image/jpeg") 1x,
       url("../../img/offers/offers-mobile@2x.jpg") type("image/jpeg") 2x
     ),
-    linear-gradient(to top, #61A8E9 0, #61A8E9 360px, $play-btn 360px);
+    linear-gradient(to top, #61a8e9 0, #61a8e9 360px, $play-btn 360px);
   background-repeat: no-repeat;
   background-position: bottom;
 
