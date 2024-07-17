@@ -4,7 +4,22 @@
 
 
 .faq__container {
+  width: 320px;
+  margin: 0 auto;
   padding: 71px 15px;
+
+  @media ($tablet) {
+    width: 768px;
+    padding: 61px 45px;
+  }
+
+  @media ($desktop) {
+    display: grid;
+    width: 1366px;
+    padding: 99px 103px;
+    grid-template-columns: 260px 1fr;
+    gap: 0 40px;
+  }
 }
 
 .faq__title {
@@ -16,6 +31,18 @@
   line-height: 1;
   color: $base-color;
   text-align: center;
+
+  @media ($tablet) {
+    margin-bottom: 44px;
+    font-size: 42px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 51px;
+    font-size: 54px;
+    text-align: left;
+    grid-column: 1 / -1;
+  }
 }
 
 .faq__buttons-list {
@@ -25,6 +52,14 @@
   margin-bottom: 35px;
   flex-wrap: wrap;
   gap: 10px;
+
+  @media ($tablet) {
+    margin-bottom: 45px;
+  }
+
+  @media ($desktop) {
+    flex-direction: column;
+  }
 }
 
 .faq__button {
@@ -46,10 +81,34 @@
     background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
     border: none;
   }
+
+  @media ($tablet) {
+    width: 162px;
+    padding: 18px 22px 16px;
+    font-size: 18px;
+
+    &--active {
+      padding: 18px 22px;
+    }
+  }
+
+  @media ($desktop) {
+    width: 260px;
+    padding: 19px 22px 15px;
+
+    &--active {
+      padding: 21px 22px 15px;
+    }
+  }
 }
 
 .faq__content ul {
   @include list-resseting;
+
+  @media ($desktop) {
+    position: relative;
+    top: -1px;
+  }
 }
 
 .faq__content li {
@@ -58,6 +117,16 @@
   grid-template-columns: 238px 1fr;
   gap: 0 22px;
   border-bottom: 1px solid $divider;
+
+  @media ($tablet) {
+    padding: 23px 0;
+    grid-template-columns: 560px 1fr;
+  }
+
+  @media ($desktop) {
+    padding: 23px 0 22px;
+    grid-template-columns: 660px 1fr;
+  }
 }
 
 .faq__content li:first-child {
@@ -71,6 +140,17 @@
   line-height: 1;
   color: $base-color;
   cursor: pointer;
+
+  @media ($tablet) {
+    margin-top: 2px;
+    font-size: 22px;
+    align-self: center;
+  }
+
+  @media ($desktop) {
+    margin-top: 0;
+    font-size: 24px;
+  }
 }
 
 .faq__content button {
@@ -99,6 +179,17 @@
     display: none;
     rotate: 90deg;
   }
+
+  @media ($tablet) {
+    width: 40px;
+    height: 40px;
+    justify-self: end;
+
+    &::before,
+    &::after {
+      width: 20px;
+    }
+  }
 }
 
 .faq__content span {
@@ -123,6 +214,16 @@
   opacity: 1;
 
   transition: all 0.5s;
+
+  @media ($tablet) {
+    padding-top: 11px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @media ($desktop) {
+    padding-top: 24px;
+  }
 }
 
 .js-close p {
