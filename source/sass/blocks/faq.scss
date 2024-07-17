@@ -1,0 +1,309 @@
+.faq {
+  background-color: $primary-bg;
+}
+
+
+.faq__container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 71px 15px;
+
+  @media ($tablet) {
+    width: 768px;
+    padding: 61px 45px;
+  }
+
+  @media ($desktop) {
+    display: grid;
+    width: 1366px;
+    padding: 99px 103px;
+    grid-template-columns: 260px 1fr;
+    gap: 0 40px;
+  }
+}
+
+.faq__title {
+  margin: 0;
+  margin-bottom: 34px;
+  font-family: $secondary-font;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: $base-color;
+  text-align: center;
+
+  @media ($tablet) {
+    margin-bottom: 44px;
+    font-size: 42px;
+  }
+
+  @media ($desktop) {
+    margin-bottom: 51px;
+    font-size: 54px;
+    text-align: left;
+    grid-column: 1 / -1;
+  }
+}
+
+.faq__buttons-list {
+  @include list-resseting;
+
+  display: flex;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media ($tablet) {
+    margin-bottom: 45px;
+  }
+
+  @media ($desktop) {
+    flex-direction: column;
+  }
+}
+
+.faq__button {
+  width: 140px;
+  padding: 14px 22px;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: $base-color;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid $tab-border;
+  cursor: pointer;
+
+  &--active {
+    padding: 15px 23px;
+    color: $base-white;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border: transparent;
+
+    &:hover,
+    &:focus-visible {
+      padding: 14px 22px;
+      color: $base-color;
+      background: transparent;
+      border: 1px solid $tab-border;
+      border-color: $base-color;
+      outline: none;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: $base-color;
+    outline: none;
+  }
+
+  &:active {
+    padding: 15px 23px;
+    color: $base-white;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border: transparent;
+  }
+
+  @media ($tablet) {
+    width: 162px;
+    padding: 18px 22px 16px;
+    font-size: 18px;
+
+    &--active {
+      padding: 18px 22px;
+
+      &:hover,
+      &:focus-visible {
+        padding: 18px 22px 16px;
+      }
+    }
+
+    &:active {
+      padding: 18px 22px;
+    }
+  }
+
+  @media ($desktop) {
+    width: 260px;
+    padding: 19px 22px 15px;
+
+    &--active {
+      padding: 21px 22px 15px;
+
+      &:hover,
+      &:focus-visible {
+        padding: 19px 22px 15px;
+      }
+    }
+
+    &:active {
+      padding: 21px 22px 15px;
+    }
+  }
+}
+
+.faq__content ul {
+  @include list-resseting;
+
+  @media ($desktop) {
+    position: relative;
+    top: -1px;
+  }
+}
+
+.faq__content li {
+  display: grid;
+  padding: 20px 0;
+  grid-template-columns: 238px 1fr;
+  gap: 0 22px;
+  border-bottom: 1px solid $divider;
+
+  @media ($tablet) {
+    padding: 23px 0;
+    grid-template-columns: 560px 1fr;
+  }
+
+  @media ($desktop) {
+    padding: 23px 0 22px;
+    grid-template-columns: 660px 1fr;
+  }
+}
+
+.faq__content li:first-child {
+  border-top: 1px solid $divider;
+}
+
+.faq__content h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  color: $base-color;
+  cursor: pointer;
+
+  @media ($tablet) {
+    margin-top: 2px;
+    font-size: 22px;
+    align-self: center;
+  }
+
+  @media ($desktop) {
+    margin-top: 0;
+    font-size: 24px;
+  }
+}
+
+.faq__content button {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  background-color: $btn-border;
+  border: 1px solid $btn-border;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 1px;
+    top: 50%;
+    left: 50%;
+    background-color: $base-white;
+    translate: -50% -50%;
+  }
+
+  &::after {
+    display: none;
+    rotate: 90deg;
+  }
+
+  &:hover {
+    background-color: $btn-border;
+
+    &::before,
+    &::after {
+      background-color: $base-white;
+    }
+  }
+
+  &:focus-visible {
+    background-color: $divider;
+    outline: none;
+
+    &::before,
+    &::after {
+      background-color: $base-white;
+    }
+  }
+
+  @media ($tablet) {
+    width: 40px;
+    height: 40px;
+    justify-self: end;
+
+    &::before,
+    &::after {
+      width: 20px;
+    }
+  }
+}
+
+.js-close button {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    background-color: $btn-border;
+  }
+
+  &::after {
+    display: block;
+  }
+}
+
+.faq__content span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.faq__content p {
+  height: auto;
+  margin: 0;
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
+  color: $base-color;
+  opacity: 1;
+
+  transition: all 0.5s;
+
+  @media ($tablet) {
+    padding-top: 11px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
+  @media ($desktop) {
+    padding-top: 24px;
+  }
+}
+
+.js-close p {
+  padding: 0;
+  line-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: all 0.5s;
+}
