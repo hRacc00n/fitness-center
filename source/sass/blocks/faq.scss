@@ -6,17 +6,17 @@
 .faq__container {
   width: 320px;
   margin: 0 auto;
-  padding: 71px 15px;
+  padding: 71px 15px 70px;
 
   @media ($tablet) {
     width: 768px;
-    padding: 61px 45px;
+    padding: 61px 45px 58px;
   }
 
   @media ($desktop) {
     display: grid;
     width: 1366px;
-    padding: 99px 103px;
+    padding: 99px 103px 98px;
     grid-template-columns: 260px 1fr;
     gap: 0 40px;
   }

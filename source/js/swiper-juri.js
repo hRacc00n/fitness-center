@@ -2,7 +2,7 @@
 import Swiper from 'swiper';
 import {Navigation, Pagination} from 'swiper/modules';
 
-const swiperJuri = new Swiper('.swiper', {
+const swiperJuri = new Swiper('.swiper:not(.swiper--reviews)', {
   modules: [Navigation, Pagination],
   navigation: {
     nextEl: '.swiper-button-next',
@@ -24,4 +24,20 @@ const swiperJuri = new Swiper('.swiper', {
   loop: true,
 });
 
-export {swiperJuri};
+const swiperReviews = new Swiper('.swiper--reviews', {
+  modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: '.reviews__button-next',
+    prevEl: '.reviews__button-prev',
+  },
+  slidesPerView: 1,
+  spaceBetween: 40,
+  breakpoints: {
+    1366: {
+      simulateTouch: false,
+    },
+  },
+  observeParents: true,
+});
+
+export {swiperJuri, swiperReviews};

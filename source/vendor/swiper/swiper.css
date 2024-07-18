@@ -45,6 +45,11 @@
   z-index: 1;
   display: block;
 }
+
+.swiper--reviews {
+  height: 100%;
+}
+
 .swiper-vertical > .swiper-wrapper {
   flex-direction: column;
 }
@@ -301,4 +306,14 @@
   opacity: 1;
   transition: 0.3s ease 0s;
 }
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  pointer-events: none;
+
+  &::before {
+    border-color: rgba(16, 38, 84, 0.3);
+  }
+}
+
 /* Slide styles end */
