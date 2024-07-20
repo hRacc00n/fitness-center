@@ -473,7 +473,44 @@
       </div>
     </section>
 
-    <div data-test="form">form</div>
+    <section class="form" data-test="form">
+      <div class="form__container">
+        <h2 class="visually-hidden">Полезная информация</h2>
+        <form class="form__container" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="form__group">
+            <h3 class="form__title">Бесплатное занятие</h3>
+            <label class="visually-hidden" for="name">Имя</label>
+            <input class="form__input" type="text" name="name" id="name" placeholder="Имя">
+            <label class="visually-hidden" for="telephone">Телефон</label>
+            <input class="form__input" type="text" name="telephone" id="telephone" placeholder="Телефон">
+            <button class="form__button button" type="submit">отправить</button>
+          </div>
+
+        </form>
+        <div class="form__contacts">
+          <h3 class="form__contacts-title">Контакты</h3>
+          <ul class="form__contacts-list">
+            <li class="form__contacts-item">
+              <h4 class="form__contacts-subtitle">Адрес:</h4>
+              <address class="form__contacts-text">г. Омск, ул. 60 лет Октября, 7</address>
+            </li>
+            <li class="form__contacts-item">
+              <h4 class="form__contacts-subtitle">График работы:</h4>
+              <p class="form__contacts-text">Пн-Вс: с 8:00 до 22:00</p>
+            </li>
+            <li class="form__contacts-item">
+              <h4 class="form__contacts-subtitle">Телефон:</h4>
+              <a class="form__contacts-text" href="tel:88005555555">8 800 555-55-55</a>
+            </li>
+            <li class="form__contacts-item">
+              <h4 class="form__contacts-subtitle">Email:</h4>
+              <a class="form__contacts-text" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <div data-test="footer">footer</div>
     <script type="module" src="js/main.js"></script>
   </body>
