@@ -1,0 +1,86 @@
+.footer {
+  background-color: $dark;
+}
+
+.footer__container {
+  padding: 40px 15px;
+}
+
+.footer__logo img {
+  width: 100px;
+  height: 20px;
+  margin-bottom: 25px;
+  object-fit: cover;
+}
+
+.footer__list {
+  @include list-resseting;
+
+  display: flex;
+  margin-bottom: 29px;
+  flex-wrap: wrap;
+  gap: 19px 35px;
+}
+
+.footer__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  color: $base-white;
+  text-decoration: none;
+}
+
+.footer__social-list {
+  @include list-resseting;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer__social-item {
+  width: 25px;
+  height: 25px;
+}
+
+.footer__social-link {
+  position: relative;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-color: $base-white;
+  border-radius: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #030a1a;
+    translate: -50% -50%;
+    mask-repeat: no-repeat;
+  }
+}
+
+.footer__social-link--vk {
+  &::before {
+    height: 13px;
+    mask-image: url("/__spritemap#sprite-vk-view");
+  }
+}
+
+.footer__social-link--odnoklassniki {
+  &::before {
+    width: 10px;
+    height: 17px;
+    mask-image: url("/__spritemap#sprite-odnoklassniki-view");
+  }
+}
+
+.footer__social-link--reddit {
+  &::before {
+    mask-image: url("/__spritemap#sprite-reddit-view");
+  }
+}
