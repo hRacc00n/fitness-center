@@ -3,7 +3,16 @@
 }
 
 .footer__container {
+  width: 320px;
+  margin: 0 auto;
   padding: 40px 15px;
+
+  @media ($tablet) {
+    display: grid;
+    width: 768px;
+    padding: 45px 45px 48px;
+    grid-template-columns: 110px 1fr 105px;
+  }
 }
 
 .footer__logo img {
@@ -11,6 +20,12 @@
   height: 20px;
   margin-bottom: 25px;
   object-fit: cover;
+
+  @media ($tablet) {
+    width: 110px;
+    height: 22px;
+    margin: 0;
+  }
 }
 
 .footer__list {
@@ -20,6 +35,12 @@
   margin-bottom: 29px;
   flex-wrap: wrap;
   gap: 19px 35px;
+
+  @media ($tablet) {
+    margin: 0;
+    padding: 0 35px;
+    gap: 19px 31px;
+  }
 }
 
 .footer__link {
@@ -28,6 +49,10 @@
   line-height: 1.43;
   color: $base-white;
   text-decoration: none;
+
+  @media ($tablet) {
+    line-height: 1.57;
+  }
 }
 
 .footer__social-list {
@@ -36,6 +61,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media ($tablet) {
+    gap: 15px;
+  }
 }
 
 .footer__social-item {
@@ -61,6 +90,31 @@
     background-color: #030a1a;
     translate: -50% -50%;
     mask-repeat: no-repeat;
+  }
+
+  &:hover {
+    background-color: $divider;
+
+    &::before {
+      background-color: $base-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $price;
+
+    &::before {
+      background-color: $base-white;
+    }
+  }
+
+  &:active {
+    background-color: $base-color;
+
+    &::before {
+      background-color: $base-white;
+    }
   }
 }
 
