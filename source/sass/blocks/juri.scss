@@ -108,3 +108,75 @@
   left: 34px;
   rotate: 180deg;
 }
+
+.juri__info {
+  position: relative;
+  width: 260px;
+}
+
+.juri__popup {
+  position: absolute;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding: 62px 41px 51px;
+  background-color: rgba(16, 38, 84, 0.89);
+  opacity: 0;
+  transition: 0.3s ease 0s;
+}
+
+.juri__popup-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+}
+
+.juri__popup-type {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: center;
+}
+
+.juri__popup-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 12px;
+  list-style-type: none;
+}
+
+.juri__popup-item {
+  position: relative;
+  padding-left: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.57;
+  color: #ffffff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 9px;
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    translate: 0 -50%;
+  }
+}
+
+.juri__slide:hover > .juri__popup,
+.juri__slide:focus-visible > .juri__popup {
+  opacity: 1;
+  transition: 0.3s ease 0s;
+}
