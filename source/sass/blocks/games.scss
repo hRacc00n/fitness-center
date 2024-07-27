@@ -1,11 +1,15 @@
 .games {
+  width: 320px;
+  margin: 0 auto;
   padding: 25px 15px 24px;
 
   @media ($tablet) {
+    width: 768px;
     padding: 60px 45px 59px;
   }
 
   @media ($desktop) {
+    width: 1366px;
     padding: 100px 103px;
   }
 }

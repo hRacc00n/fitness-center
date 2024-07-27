@@ -1,8 +1,18 @@
-.form__container {
+.form {
   @media ($desktop) {
+    background: linear-gradient(to right, $base-color 0, $base-color 50%, $base-white 50%);
+    border-top: 1px solid $divider;
+  }
+}
+
+.form__container {
+  background-color: $base-color;
+
+  @media ($desktop) {
+    width: 1366px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 683px);
-    background-color: $base-color;
   }
 }
 
@@ -11,10 +21,12 @@
   margin: 0;
   padding: 71px 15px 73px;
   gap: 33px;
-  background-color: $base-color;
+
   border: none;
 
   @media ($tablet) {
+    max-width: 768px;
+    margin: 0 auto;
     padding: 60px 164px 63px;
     grid-template-columns: repeat(2, 205px);
     gap: 33px 30px;
@@ -127,7 +139,7 @@
 
   @media ($desktop) {
     padding: 59px 103px 71px;
-    border-top: 1px solid $divider;
+    // border-top: 1px solid $divider;
   }
 }
 
@@ -160,6 +172,7 @@
   @media ($tablet) {
     position: relative;
     width: 440px;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 190px);
     gap: 15px 60px;
 
