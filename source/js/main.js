@@ -1,7 +1,7 @@
 import {videoButton, monthButtons} from './variables';
 import {onButtonPlayVideo} from './on-button-play-video';
 import {onButtonChangePrice} from './on-button-change-price';
-import './swiper-juri';
+import './swiper-slider';
 
 videoButton.addEventListener('click', onButtonPlayVideo);
 monthButtons.addEventListener('click', onButtonChangePrice);
