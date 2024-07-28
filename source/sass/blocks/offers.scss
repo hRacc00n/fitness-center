@@ -144,6 +144,7 @@
 
 .offers__link {
   display: inline-block;
+  width: min-content;
   padding: 10px;
   font-size: 14px;
   font-weight: 700;
@@ -171,6 +172,11 @@
     border-color: transparent;
   }
 
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   &--adversting {
     color: $btn-border;
     text-decoration-color: $divider;
@@ -189,6 +195,11 @@
       color: $btn-border;
       text-decoration-color: $btn-border;
       border-color: transparent;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
     }
   }
 

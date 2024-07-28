@@ -34,6 +34,11 @@
     border: 2px solid $base-white;
   }
 
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   &--secondary {
     width: 100%;
     padding: 25px 20px;
@@ -58,6 +63,11 @@
 
     &:active {
       color: rgba(255, 255, 255, 0.8);
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
     }
   }
 

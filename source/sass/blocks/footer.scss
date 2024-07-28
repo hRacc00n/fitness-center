@@ -67,6 +67,20 @@
   color: $base-white;
   text-decoration: none;
 
+  &:hover {
+    border-bottom: 1px solid $base-white;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline-offset: 10px;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   @media ($tablet) {
     line-height: 1.57;
   }

@@ -260,6 +260,20 @@
     }
   }
 
+  &:disabled {
+    opacity: 0.4;
+    border: 2px solid $base-color;
+    pointer-events: none;
+
+    &::before {
+      background: none;
+    }
+
+    &::after {
+      border-left-color: $base-color;
+    }
+  }
+
   &--js {
     display: none;
   }

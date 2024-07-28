@@ -130,6 +130,11 @@
     border-bottom: 2px solid $play-btn;
   }
 
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
   @media ($tablet) {
     font-size: 18px;
     padding-bottom: 7px;
