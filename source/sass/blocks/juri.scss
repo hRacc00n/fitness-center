@@ -175,8 +175,14 @@
   }
 }
 
-.juri__slide:hover > .juri__popup,
 .juri__slide:focus-visible > .juri__popup {
   opacity: 1;
   transition: 0.3s ease 0s;
+}
+
+.juri__slide:hover > .juri__popup {
+  @media ($desktop) {
+    opacity: 1;
+    transition: 0.3s ease 0s;
+  }
 }

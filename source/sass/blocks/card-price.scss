@@ -8,7 +8,7 @@
   }
 }
 
-.card-price:has(.card-price__button:hover),
+.card-price:hover,
 .card-price:has(.card-price__button:focus-visible) {
   border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%) 7;
 }
